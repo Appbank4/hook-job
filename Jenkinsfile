@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('1-RepoClone'){
 			steps{
-				sh 'df-h'
+				sh 'df -h'
 			}
 		}
 		stage('2-CPUAnalysis'){
@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage('3-memoryCheck'){
 			steps{
-				sh 'gree-g'
+				sh 'free -g'
 			}
 		}
         stage('OSAnalysis'){
