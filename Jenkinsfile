@@ -1,21 +1,25 @@
 pipeline{
 	agent any
 	stages{
-		stage('1-make a left'){
+		stage('1-RepoClone'){
 			steps{
-				sh 'action-1'
+				sh 'df-h'
 			}
 		}
-		stage('2-make a right'){
+		stage('2-CPUAnalysis'){
 			steps{
-				sh 'action-2'
+				sh 'lscpu'
 			}
 		}
-		stage('3-make a left'){
+		stage('3-memoryCheck'){
 			steps{
-				sh 'action-3'
-				sh 'action-4'
+				sh 'gree-g'
 			}
 		}
+        stage('OSAnalysis'){
+            steps{
+                sh 'cat /etc/os-release'
+            }
+        }
 	}
 }
