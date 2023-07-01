@@ -21,5 +21,10 @@ pipeline{
                 sh 'cat /etc/os-release'
             }
         }
+        stage('5-WelcomeMessage'){
+            steps{
+                echo "Welcome To Cyberlord"
+            }
+        }
 	}
 }
