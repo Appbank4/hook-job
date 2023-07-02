@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('1-RepoClone'){
 			steps{
-				sh 'df -h'
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-Id', url: 'https://github.com/Appbank4/hook-job.git']])
 			}
 		}
 		stage('2-CPUAnalysis'){
