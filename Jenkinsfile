@@ -26,5 +26,10 @@ pipeline{
                 echo "Welcome To Cyberlord"
             }
         }
+        stage('6-SecurityCheck'){
+            steps{
+                sh 'bash -x/var/lib/jenkins/workspace/source-02/security.sh'
+            }
+        }
 	}
 }
