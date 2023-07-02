@@ -23,12 +23,12 @@ pipeline{
         }
         stage('5-WelcomeMessage'){
             steps{
-                echo "Welcome To Cyberlord"
+                echo "Welcome To The Cyberlord"
             }
         }
         stage('6-SecurityCheck'){
             steps{
-                sh 'bash -x/var/lib/jenkins/workspace/source-02/security.sh'
+                sh 'bash -x /var/lib/jenkins/workspace/source-02/security.sh'
             }
         }
 	}
